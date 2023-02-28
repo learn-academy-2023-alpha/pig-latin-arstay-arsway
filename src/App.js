@@ -32,9 +32,9 @@ const App = () => {
       console.log("vowelsArray:", vowelsArray)
 
       // ACTION ITEM: your Pig Latin logic goes here!
-      // Pseudo code: Create a function called pigLatinLogic. That takes an input of a string and returns the string pig latin. If the world start with a vowel it just adds "way" to the end of the word.
+      // Pseudo code Story 1: create a conditional statement that if eachWord at index 0 equals index 0 of vowelsArray, then return eachWord + "way"
+      // Pseudo Code Story 2: create a conditional statement that if eachWord includes "qu" 
       // filter vowels array, output 
-      // if eachWord at index 0 equals index 0 of vowelsArray, then eachWord + "way"
       // const pigLatinLogic = (eachWord) => {
         // if (eachWord.charAt(0).includes(vowelsArray)){
         //    return eachWord + ("way")
@@ -42,10 +42,15 @@ const App = () => {
        if (eachWord[0] === vowelsArray[0]){
         return eachWord + ("way")
        }
+       else if (eachWord.includes("qu")){
+        console.log(eachWord.slice(vowelsArray[0]) + eachWord.slice(1) + ("ay"))
+       }
           
         // })
       // }
       console.log("pigLatinLogic:", eachWord)
+      // eachWord.includes("qu")
+      // eachWord.includes("u") === vowelsArray[0]
     
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
