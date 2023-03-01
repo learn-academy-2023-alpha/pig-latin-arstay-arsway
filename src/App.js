@@ -42,12 +42,19 @@ const App = () => {
        else if (eachWord.includes("qu")){
         return eachWord.slice(eachWord.indexOf("u") + 1, eachWord.length) + eachWord.slice(0, eachWord.indexOf("u") + 1) + ("ay")
        }
-       else if (eachWord.includes("y")){
+       else if (eachWord.includes("y") && eachWord.includes(vowelsArray)){
         return eachWord.slice(eachWord.indexOf("y")) + eachWord.slice(0, eachWord.indexOf("y")) + ("ay")
        }
+       else if (eachWord.includes(vowelsArray[0])){
+        return eachWord.slice(eachWord.indexOf(vowelsArray[0])) + eachWord.slice(0, eachWord.indexOf(vowelsArray[0])) + ("ay")
+       }
+ 
  
       console.log("pigLatinLogic:", eachWord)
+      console.log("example:", eachWord.indexOf(vowelsArray[0]));
 
+      // appleway oughthray eenquay ealsquay fry uentflay
+      // appleway hthrougay eenquay ealsquay yfray tfluenay
     
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
